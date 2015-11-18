@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "cyTagListItem.h"
 
 @interface cyTagListView : UIView
+
+- (instancetype)initWithFrame:(CGRect)frame layout:(cyTagListLayout *)layout;
+
+- (void)updateWithTags:(NSArray *)tags;
+
+@property (nonatomic, readonly) NSArray *tagItems;
+
+@property (nonatomic, readonly) cyTagListLayout *layout;
 
 @end

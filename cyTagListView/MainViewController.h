@@ -1,5 +1,5 @@
 //
-//  cySimpleTagListView.h
+//  MainViewController.h
 //  cyTagListView
 //
 //  Created by HuangPeng on 11/18/15.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "cyTagListView.h"
 
-@interface cySimpleTagListView : cyTagListView
+@interface MainViewController : UIViewController
 
 @end

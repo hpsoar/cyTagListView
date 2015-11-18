@@ -20,9 +20,35 @@
 
 @end
 
+@interface cySimpleTagListItem : cyTagListItem
+
++ (NSArray *)itemsWithTags:(NSArray *)tags;
+
+@property (nonatomic) NSString *tag;
+
+@end
+
 @interface cyTagListLayout : NSObject
 
 - (void)reset;
-- (CGPoint)positionForTagAtIndex:(NSInteger)index;
+- (CGRect)frameForTagAtIndex:(NSInteger)index size:(CGSize)size;
+
+@property (nonatomic, readonly) CGSize finalSize;
+
+@end
+
+/**
+ *  
+ */
+
+@interface cySimpleTagListLayout : cyTagListLayout
+
+@property (nonatomic) CGFloat maxWidth;
+@property (nonatomic) CGFloat maxHeight;
+
+@property (nonatomic) UIEdgeInsets insets;
+
+@property (nonatomic) CGFloat xSpace;
+@property (nonatomic) CGFloat ySapce;
 
 @end

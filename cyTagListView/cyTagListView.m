@@ -10,12 +10,16 @@
 
 @implementation cyTagListView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithFrame:(CGRect)frame layout:(cyTagListLayout *)layout {
+    self = [super initWithFrame:frame];
+    if (self) {
+        _layout = layout;
+    }
+    return self;
 }
-*/
+
+- (void)updateWithTags:(NSArray *)tags {
+    _tagItems = tags;
+}
 
 @end
